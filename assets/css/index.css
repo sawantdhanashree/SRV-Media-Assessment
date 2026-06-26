@@ -1,0 +1,14 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Museo Sans',sans-serif;
+}
+
+.container{
+    width:min(1200px,90%);
+    margin:auto;
+}
