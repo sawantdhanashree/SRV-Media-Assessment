@@ -6,21 +6,6 @@
 
  }
 
- /*==============================
-        CONTAINER
-===============================*/
-
- .container {
-     width: 100%;
-     max-width: 1400px;
-     margin: 0 auto;
-     padding: 0 15px;
- }
-
- /*==============================
-        TITLE
-===============================*/
-
  .section-title {
      text-align: center;
      margin-bottom: 60px;
@@ -55,7 +40,6 @@
 
  .feature-card {
 
-     background: #e8d8ff;
      background: linear-gradient(59.05deg, #DDBFFF 0.39%, #EDDDFF 93.5%);
      border-radius: 22px;
      padding: 40px 30px;

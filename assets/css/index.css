@@ -34,5 +34,157 @@ body {
 
 .container {
     width: min(1400px, 90%);
-    margin: auto;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.school-section {
+    padding: 80px 0;
+}
+
+.school-title {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    color: #000E38;
+    margin-bottom: 40px;
+}
+
+.school-wrapper {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.school-card {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+.school-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.school-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, .85) 10%,
+            rgba(0, 0, 0, .35) 45%,
+            rgba(0, 0, 0, .08) 100%);
+    transition: .4s;
+}
+
+.school-content {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.school-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.school-content p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.school-pagination {
+    display: none;
+}
+
+@media(max-width:1200px) {
+
+    .school-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .school-card {
+        flex: 0 0 calc(50% - 9px);
+    }
+
+    .school-title {
+        font-size: 40px;
+    }
+
+    .container {
+        width: min(1200px, 90%);
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .school-title {
+        font-size: 32px;
+        margin-bottom: 35px;
+    }
+
+    .school-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 20px;
+    }
+
+    .school-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .school-card {
+        flex: 0 0 90%;
+        height: 420px;
+        scroll-snap-align: start;
+    }
+
+    .school-content h3 {
+        font-size: 24px;
+    }
+
+    .school-content p {
+        font-size: 16px;
+    }
+
+    .school-pagination {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .school-pagination span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #d2d2d2;
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    .school-pagination span.active {
+        border-radius: 20px;
+        background: #000E38;
+    }
 }
